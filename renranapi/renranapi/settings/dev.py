@@ -36,17 +36,34 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+    'corsheaders',  # CORS
+
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # CORS
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# 添加 CORS 配置
+# 设置白名单为 *
+CORS_ORIGIN_ALLOW_ALL = True
+# 1. 设置白名单
+# CORS_ORIGIN_WHITELIST = (
+#     '127.0.0.1:8080',
+#     'localhost:8080',
+#     'http://*.*.*.*:*',  # 凡是出现在白名单中的域名，都可以访问后端接口
+# )
+# 2. 设置 CORS Cookie
+CORS_ALLOW_CREDENTIALS = False  # 指明在跨域访问中，后端是否支持对cookie的操作
 
 ROOT_URLCONF = 'renranapi.urls'
 
@@ -164,7 +181,6 @@ LOGGING = {
         },
     }
 }
-
 
 REST_FRAMEWORK = {
     # 异常处理
