@@ -7,15 +7,22 @@ import settings from "./settings";
 // 导入 饿了么Ui
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+
 import "../static/CSS/reset.css";
 
+// 导入 axios
+import axios from "axios";
 
-Vue.config.productionTip = false
 Vue.use(ElementUI); // 调用插件
+
+// 允许ajax发送请求时附带cookie，设置为不允许
+axios.defaults.withCredentials =false
+Vue.prototype.$axios = axios
 
 // 增设配置文件
 Vue.prototype.$settings = settings
 
+Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   model:history,
