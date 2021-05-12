@@ -10,10 +10,18 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import sys
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+# Django导包路径,没有注册到这的路径的所以包和模块，都不能直接导入包
+# sys.path
+# 如果希望某个项目里面的模块或者包，能直接导入使用，只需将路径添加到 sys.path 里面即可
+sys.path.append(os.path.join(BASE_DIR, 'apps'))
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -40,10 +48,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',  # CORS
 
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  # CORS
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
