@@ -19,6 +19,10 @@ Vue.use(ElementUI); // 调用插件
 axios.defaults.withCredentials =false
 Vue.prototype.$axios = axios
 
+// 全局导入字体图标
+import "../static/CSS/iconfont.css";
+import "../static/CSS/iconfont.eot";
+
 // 增设配置文件
 Vue.prototype.$settings = settings
 
