@@ -76,3 +76,22 @@ INFO 2021-05-12 15:40:24,284 basehttp 161 "GET / HTTP/1.1" 200 10697
 INFO 2021-05-12 16:20:49,027 autoreload 636 Watching for file changes with StatReloader
 INFO 2021-05-12 16:22:17,891 autoreload 636 Watching for file changes with StatReloader
 INFO 2021-05-12 16:22:30,459 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-12 16:39:23,004 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-12 16:39:23,290 basehttp 161 "GET / HTTP/1.1" 200 10697
+INFO 2021-05-12 16:39:33,166 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-12 16:48:44,269 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-12 16:49:10,027 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-12 16:49:28,793 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-12 16:52:03,872 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-12 16:52:04,120 basehttp 161 "GET / HTTP/1.1" 200 10697
+INFO 2021-05-12 16:52:20,061 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-12 16:52:29,635 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-12 16:52:29,930 basehttp 161 "GET / HTTP/1.1" 200 10697
+INFO 2021-05-12 16:55:41,696 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-12 16:55:42,512 basehttp 161 "GET / HTTP/1.1" 200 10697
+WARNING 2021-05-12 16:55:42,686 log 230 Not Found: /favicon.ico
+WARNING 2021-05-12 16:55:42,687 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2117
+INFO 2021-05-12 16:57:44,220 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-12 16:57:45,238 basehttp 161 "GET / HTTP/1.1" 200 10697
+WARNING 2021-05-12 16:57:45,399 log 230 Not Found: /favicon.ico
+WARNING 2021-05-12 16:57:45,399 basehttp 161 "GET /favicon.ico HTTP/1.1" 404 2117

@@ -196,3 +196,7 @@ REST_FRAMEWORK = {
     # 异常处理
     'EXCEPTION_HANDLER': 'renranapi.utils.exceptions.custom_exception_handler',
 }
+
+# 告诉django，调用自定义用户模型替换原来内置的用户模型
+AUTH_USER_MODEL = 'users.User'
+
