@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 import sys
+import datetime
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -18,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Django导包路径,没有注册到这的路径的所以包和模块，都不能直接导入包
-# sys.path
+print(sys.path)
 # 如果希望某个项目里面的模块或者包，能直接导入使用，只需将路径添加到 sys.path 里面即可
 sys.path.append(os.path.join(BASE_DIR, 'apps'))
 
@@ -194,9 +195,26 @@ LOGGING = {
 
 REST_FRAMEWORK = {
     # 异常处理
-    'EXCEPTION_HANDLER': 'renranapi.utils.exceptions.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'renranapi.renranapi.utils.exceptions.custom_exception_handler',
+
+    # JWT认证方式
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        # 新增jwt认证，注意不能删除session认证，因我们后面的admin运营站点还是使用的session认证
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
 }
+
+# jwt的配置选项
+JWT_AUTH = {
+    # jwt token的有效期，默认是7天
+    # 'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),
+    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=3),
+}
+
 
 # 告诉django，调用自定义用户模型替换原来内置的用户模型
 AUTH_USER_MODEL = 'users.User'
+
 
