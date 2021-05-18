@@ -193,9 +193,10 @@ LOGGING = {
     }
 }
 
+#from renranapi.utils.execptions import custom_exception_handler
 REST_FRAMEWORK = {
     # 异常处理
-    'EXCEPTION_HANDLER': 'renranapi.renranapi.utils.exceptions.custom_exception_handler',
+    'EXCEPTION_HANDLER': 'renranapi.utils.exceptions.custom_exception_handler',
 
     # JWT认证方式
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -207,10 +208,12 @@ REST_FRAMEWORK = {
 }
 
 # jwt的配置选项
+#from renranapi.apps.users.utils import jwt_response_payload_handler
 JWT_AUTH = {
     # jwt token的有效期，默认是7天
     # 'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7),
     'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=3),
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'renranapi.apps.users.utils.jwt_response_payload_handler'
 }
 
 
