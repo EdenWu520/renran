@@ -66,7 +66,7 @@ export default {
     return {
       username: "",
       password: "",
-      remember_me:"", //设置登录状态
+      remember_me: "", //设置登录状态
     }
   },
   methods: {
@@ -77,21 +77,21 @@ export default {
       }).then(response => {
         //根据remember_me的值来保存登录状态到本地 ---保存jwt到本地
         console.log(response)
-        if (this.remember_me){
+        if (this.remember_me) {
           //永久存储avatar
-          localStorage.user_avatar=response.data.avatar
-          localStorage.user_id=response.data.id
-          localStorage.user_token=response.data.token
-          localStorage.user_username=response.data.username
+          localStorage.user_avatar = response.data.avatar
+          localStorage.user_id = response.data.id
+          localStorage.user_token = response.data.token
+          localStorage.user_username = response.data.username
           sessionStorage.removeItem('user_avatar')
           sessionStorage.removeItem('user_id')
           sessionStorage.removeItem('user_token')
           sessionStorage.removeItem('user_username')
-        }else {
-          sessionStorage.user_avatar=response.data.avatar
-          sessionStorage.user_id=response.data.id
-          sessionStorage.user_token=response.data.token
-          sessionStorage.user_username=response.data.username
+        } else {
+          sessionStorage.user_avatar = response.data.avatar
+          sessionStorage.user_id = response.data.id
+          sessionStorage.user_token = response.data.token
+          sessionStorage.user_username = response.data.username
           localStorage.removeItem('user_avatar')
           localStorage.removeItem('user_id')
           localStorage.removeItem('user_token')
