@@ -225,3 +225,10 @@ AUTHENTICATION_BACKENDS = [
     'users.utils.UsernameMobileAuthBackend',
 ]
 
+# 腾讯防水墙验证码配置
+TENCENT_CAPTCHA = {
+    "GATEWAY": "https://ssl.captcha.qq.com/ticket/verify",
+    "APPID": "2025779597",
+    "App_Secret_Key": "0f82HH_Hl8_uqkOotgHNBvQ**",
+}
+

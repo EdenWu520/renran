@@ -1038,3 +1038,20 @@ INFO 2021-05-19 11:24:45,214 autoreload 636 Watching for file changes with StatR
 INFO 2021-05-19 11:25:08,758 autoreload 636 Watching for file changes with StatReloader
 INFO 2021-05-19 11:29:04,198 autoreload 636 Watching for file changes with StatReloader
 INFO 2021-05-19 11:29:29,919 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-05-19 11:34:42,949 basehttp 161 "OPTIONS /users/login/ HTTP/1.1" 200 0
+INFO 2021-05-19 11:34:43,126 basehttp 161 "POST /users/login/ HTTP/1.1" 200 226
+INFO 2021-05-19 11:34:56,316 basehttp 161 "POST /users/login/ HTTP/1.1" 200 226
+INFO 2021-06-01 07:40:04,533 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-01 07:41:12,413 basehttp 161 "OPTIONS /users/login/ HTTP/1.1" 200 0
+INFO 2021-06-01 07:41:12,591 basehttp 161 "POST /users/login/ HTTP/1.1" 200 226
+WARNING 2021-06-01 09:20:55,535 log 224 Not Found: /users/captcha/
+WARNING 2021-06-01 09:20:55,535 basehttp 161 "GET /users/captcha/?randstr=%400WJ&ticket=t03z_CEgF2h9G6th5uyNatAqiAuP4f557X_uduDCrBiH_iAggrFIbT61PPkmCgRMvp_X_4Kwm81KP78mfHrzj6oWDOW9edN3B_oOfVxIp12-lC_RPO5VnNviA** HTTP/1.1" 404 2431
+INFO 2021-06-01 09:22:40,343 autoreload 636 Watching for file changes with StatReloader
+WARNING 2021-06-01 09:22:58,689 log 224 Bad Request: /users/captcha/
+WARNING 2021-06-01 09:22:58,690 basehttp 161 "GET /users/captcha/?randstr=%40z2L&ticket=t03dlQpe37aLZccFXb8ScfV3VMmt6Hzneh58yYx3OxbCwmcjCohoQNg3XzHK66jo1MYSu_0fNpMOomd7LmbRHeoIC7V8QWxeAu_U9ekJg_9LyYuOkT2QoqfVw** HTTP/1.1" 400 23
+INFO 2021-06-01 09:23:18,926 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-01 09:23:42,179 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-01 09:24:21,910 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-01 09:26:16,073 autoreload 636 Watching for file changes with StatReloader
+INFO 2021-06-01 09:26:26,907 basehttp 161 "GET /users/captcha/?randstr=%40Itc&ticket=t03a7aB8qKZCaqtde_tk6exChKzeZ9z33v5UEq2pqUs1Z3kR8jLle2XmFsOlGxikM7WVj6b6WpOuJXDGoTr2iWTPPnosbt_13OAFOSAZ9j1C45FpqOu5rD6Ow** HTTP/1.1" 200 23
+INFO 2021-06-01 09:26:27,118 basehttp 161 "POST /users/login/ HTTP/1.1" 200 226

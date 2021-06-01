@@ -26,6 +26,10 @@ import "../static/CSS/iconfont.eot";
 // 增设配置文件
 Vue.prototype.$settings = settings
 
+// 导入防水墙验证码
+import "../static/js/TCaptcha";
+
+
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

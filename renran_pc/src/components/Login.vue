@@ -33,7 +33,7 @@
           <div class="forget-btn">
             <a class="" data-toggle="dropdown" href="">登录遇到问题?</a>
           </div>
-          <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click="loginHandler">
+          <button class="sign-in-button" id="sign-in-form-submit-btn" type="button" @click="show_captcha">
             <span id="sign-in-loading"></span>
             登录
           </button>
@@ -70,6 +70,25 @@ export default {
     }
   },
   methods: {
+    show_captcha() {
+      var captcha1 = new TencentCaptcha(`${settings.TC_captcha.app_id}`, res => {
+        console.log(res)
+        this.$axios.get(`${this.$settings.Host}/users/captcha/`, {
+          params:{
+            randstr: res.randstr,
+            ticket: res.ticket
+          }
+        }).then(response=>{
+          if(response.data.detail){
+            // 继续进行登录处理
+           this.loginHandler();
+          }
+        }).catch(error=>{
+          this.$message.error('验证不通过')
+        })
+      });
+      captcha1.show(); // 显示验证码
+    },
     loginHandler() {
       this.$axios.post(`${this.$settings.Host}/users/login/`, {
         username: this.username,
